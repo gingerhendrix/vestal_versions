@@ -22,7 +22,7 @@ class ResetTest < Test::Unit::TestCase
     should 'dissociate all versions after the target' do
       @versions.reverse.each do |version|
         @user.reset_to!(version)
-        assert_equal 0, @user.versions(true).after(version).count
+        assert_equal 0, @user.versions(true).after(version).length
       end
     end
 
