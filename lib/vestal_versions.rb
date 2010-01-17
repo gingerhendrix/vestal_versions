@@ -87,6 +87,7 @@ module VestalVersions
       include Control
       include Tagging
       include Reload
+      include Collapse
 
       prepare_versioned_options(options)
       has_many :versions, options, &block
